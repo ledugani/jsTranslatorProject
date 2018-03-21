@@ -6,7 +6,7 @@ const inputBox = document.getElementById('toTranslate');
 const spanishBtn = document.getElementById('spanish');
 const germanBtn = document.getElementById('german');
 const klingonBtn = document.getElementById('klingon');
-const outputBox = document.getElementById('translated');
+const outputBox = document.getElementById('output');
 
 // germanBtn.addEventListener('click', (e) => {
 //     console.log("my event", e);
