@@ -60,3 +60,33 @@ var klingon = {
     "wishes": "vIneH",
     "kwanzaa": "kwanzaa"
 };
+ 
+const allTheButtons = document.getElementsByClassName('button');
+const outputArea = document.getElementById('outputArea');
+let input = document.getElementById("inputArea");
+let output = [];
+
+for (let i = 0; i < allTheButtons.length; i++) {
+    
+    allTheButtons[i].addEventListener('click', translateInput)
+
+    allTheButtons[i].addEventListener('click', e => {
+        const userInput = input.value;
+
+        if (e.target.id === "spanishBtn") {
+            userInput.forEach((element) => {
+                output.push(spanish.element);
+            });
+        } else if (e.target.id ==="germanBtn") {
+            userInput.forEach(element => {
+                output.push(german.element);
+            });
+        } else if (e.target.id === "klingonBtn") {
+            userInput.forEach(element => {
+                output.push(klingon.element);
+            });
+        }
+        outputArea.innerHTML = output;
+    });
+
+}
