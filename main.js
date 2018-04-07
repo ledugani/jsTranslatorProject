@@ -67,8 +67,6 @@ let input = document.getElementById("inputArea");
 let output = [];
 
 for (let i = 0; i < allTheButtons.length; i++) {
-    
-    allTheButtons[i].addEventListener('click', translateInput)
 
     allTheButtons[i].addEventListener('click', e => {
         const userInput = input.value;
