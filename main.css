@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: seagreen;
+}
+
+input {
+    width: 300px;
+    height: 150px;
+}
