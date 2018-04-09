@@ -8,6 +8,7 @@ var spanish = {
     "holidays": "fiestas",
     "new": "nuevo",
     "year": "ano",
+    "merry": "Feliz",
     "christmas": "navidad",
     "season": "temporada",
     "seasons": "temporadas",
@@ -29,7 +30,8 @@ var german = {
     "holidays": "ferien",
     "new": "neu",
     "year": "jahr",
-    "christmas": "weihnachten",
+    "merry": "Fröhliche",
+    "christmas": "Weihnachten",
     "season": "jahreszeit",
     "seasons": "jahreszeiten",
     "greeting": "Gruß",
@@ -50,6 +52,7 @@ var klingon = {
     "holidays": "QI'lop",
     "new": "chu'",
     "year": "dis",
+    "merry": "Quch",
     "christmas": "QISmaS",
     "season": "maqtagh",
     "seasons": "maqtagh",
@@ -62,7 +65,7 @@ var klingon = {
 };
  
 const allTheButtons = document.getElementsByClassName('button');
-const outputArea = document.getElementById('outputArea');
+let outputArea = document.getElementById('outputArea');
 let input = document.getElementById("inputArea");
 let inputValue = [];
 let output = [];
@@ -71,7 +74,7 @@ for (let i = 0; i < allTheButtons.length; i++) {
 
     allTheButtons[i].addEventListener('click', e => {
         
-        inputValue = input.value.split(" ");
+        inputValue = input.value.toLowerCase().split(" ");
 
         if (e.target.id === "spanishBtn") {
             inputValue.forEach((element) => {
@@ -86,7 +89,12 @@ for (let i = 0; i < allTheButtons.length; i++) {
                 output.push(klingon[element]);
             });
         }
-        outputArea.innerHTML = output;
+        outputArea.innerHTML = output.join(" ");
     });
 
 }
+
+// CLEAR BUTTON
+const clearOutput = e => {
+    outputArea = " ";
+};
