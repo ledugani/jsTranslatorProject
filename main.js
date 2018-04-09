@@ -89,7 +89,7 @@ for (let i = 0; i < allTheButtons.length; i++) {
                 output.push(klingon[element]);
             });
         }
-        outputArea.innerHTML = output;
+        outputArea.innerHTML = output.join(" ");
     });
 
 }
