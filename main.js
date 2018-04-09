@@ -64,15 +64,17 @@ var klingon = {
 const allTheButtons = document.getElementsByClassName('button');
 const outputArea = document.getElementById('outputArea');
 let input = document.getElementById("inputArea");
+let inputValue = [];
 let output = [];
 
 for (let i = 0; i < allTheButtons.length; i++) {
 
     allTheButtons[i].addEventListener('click', e => {
-        const userInput = input.value;
+        inputValue = input.value;
+        inputValue.split(' ');
 
         if (e.target.id === "spanishBtn") {
-            userInput.forEach((element) => {
+            inputValue.forEach((element) => {
                 output.push(spanish.element);
             });
         } else if (e.target.id ==="germanBtn") {
